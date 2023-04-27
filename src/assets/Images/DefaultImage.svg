@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 260 260">
+  <defs>
+    <radialGradient id="radial-gradient" cx="130" cy="130" r="171.08" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ccc"/>
+      <stop offset="1" stop-color="#b3b3b3"/>
+    </radialGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect width="260" height="260" style="fill: url(#radial-gradient)"/>
+        <g style="opacity: 0.69">
+          <polygon points="97.96 151.47 119.44 135.64 126.21 141.59 142.91 121.88 163.04 151.47 163.04 151.47 97.96 151.47" style="fill: gray"/>
+          <circle cx="105.54" cy="124.35" r="5.42" style="fill: gray"/>
+          <path d="M77.77,102.54a4.44,4.44,0,0,1,4.45-4.44h75.51l-4.55-16.61a3,3,0,0,0-3.69-2.1L68,101.73a3,3,0,0,0-2.1,3.69l11.89,43.4Z" style="fill: gray;opacity: 0.39"/>
+          <path d="M173.62,105.76H88.14a2.52,2.52,0,0,0-2.52,2.52v53.81a2.52,2.52,0,0,0,2.52,2.52h85.48a2.52,2.52,0,0,0,2.52-2.52V108.28A2.52,2.52,0,0,0,173.62,105.76Zm-1.94,53.39a.68.68,0,0,1-.68.68H90.75a.69.69,0,0,1-.68-.68V111.22a.68.68,0,0,1,.68-.67H171a.67.67,0,0,1,.68.67Z" style="fill: gray"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
