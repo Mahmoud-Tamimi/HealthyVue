@@ -6,7 +6,7 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <h3>Installed CLI Plugins</h3>
+    <h3 :class="[classcalc.Classcolor, 'sjxbsxjn']" :style="`font-size: ${classcalc.FontSize}px`">{{ Status }}</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
@@ -14,7 +14,7 @@
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript" target="_blank" rel="noopener">typescript</a></li>
     </ul>
-    <h3>Essential Links</h3>
+    <h3 ref="Links">Essential Links</h3>
     <ul>
       <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
@@ -30,17 +30,76 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <Simple @sending-start="DataRecive"></Simple>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import type { PropType } from 'vue'
+import Simple from './Simple.vue'
+
+type Box = {
+  width: number
+  height: number
+  length: number
+  name?: string
+  color?: 'black' | 'white'
+}
+
+var newbox :Box = {
+  height: 323,
+  length: 323,
+  width: 323
+}
 
 export default defineComponent({
   name: 'HelloWorld',
   props: {
-    msg: String
-  }
+    msg: String,
+    phone: { type: String, default: '0797123456' },
+    BoxData: { type: Object as PropType<Box> }
+  },
+  data () {
+    return {
+      Status: 'Success',
+      ClassFromServer: 'Container h3 BOLD',
+      UserFontSize: 100,
+      box: {} as Box
+    }
+  },
+  mounted () {
+    console.log('this.$attrs')
+    console.log(this.$attrs)
+    console.log(this.$refs.Links)
+    const ref :any = this.$refs.Links
+    setTimeout(() => {
+      ref.innerHTML = 'xxxx'
+    }, 1000)
+  },
+  computed: {
+    classcalc () {
+      var Classcolor = ''
+      var FontSize = this.UserFontSize
+      if (this.Status === 'Success') {
+        Classcolor = 'Green'
+        FontSize = 70
+      } else if (this.Status === 'Failed') {
+        Classcolor = 'Red'
+        FontSize = 30
+      }
+      return {
+        FontSize: FontSize,
+        Classcolor: Classcolor
+      }
+    }
+  },
+  methods: {
+    DataRecive () {
+      console.log('Task Done')
+    }
+  },
+  components: { Simple }
 })
 </script>
 
@@ -59,5 +118,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.Red{
+  background-color: red;
+}
+.Green{
+  background-color: green;
 }
 </style>

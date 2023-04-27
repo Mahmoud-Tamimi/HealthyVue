@@ -1,10 +1,24 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/help">Help</router-link>
   </nav>
   <router-view/>
+  <p>test</p>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+
+export default defineComponent({
+  name: 'HomeView',
+  data () {
+    return {}
+  }
+})
+</script>
 
 <style>
 #app {
