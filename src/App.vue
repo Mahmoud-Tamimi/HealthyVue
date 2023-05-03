@@ -269,9 +269,6 @@ h1{
 .Healthy{
     height: auto;
 }
-.Our{
-    padding: 0 100px;
-}
 .Num1 {
     width: 100%;
 }
@@ -286,6 +283,9 @@ h1{
 }
 .IMG{
     aspect-ratio: 3/2;
+  }
+  .Our{
+    padding: 0 30px;
   }
 }
 
@@ -311,19 +311,11 @@ h1{
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
        }
-       .PP{
-        width: 100%;
-       }
        .LPicP{
         width: 90%;
         margin: auto;
        }
 }
-
-/* large screens */
-@media (min-width:1200px) {
-}
-
 /* custom DO */
 @media (max-width:1400px) {
     .DoPics{
@@ -419,96 +411,6 @@ h1{
 @media (max-width:500px) {
     .Foot{
         font-size: 16px;
-    }
-}
-@media (max-width:808px) {
-    .contant_card{
-        flex-direction: column;
-        margin: auto;
-    }
-    .Phone_card{
-        border: none;
-    }
-}
-@media (max-width:600px) {
-    .Details{
-        flex-direction: column;
-        gap: 25px;
-    }
-    .Price_card{
-        display: flex;
-        justify-content: center;
-    }
-    .contant_card{
-        margin: auto;
-    }
-}
-@media (min-width:992px) and (max-width:1400px) {
-    .Details{
-        flex-direction: column;
-        gap: 25px;
-    }
-    .Price_card{
-        display: flex;
-        justify-content: center;
-    }
-    .contant_card{
-        margin: auto;
-    }
-}
-@media (max-width:1663px) {
-    .Filter{
-        flex-direction: column-reverse;
-        gap: 50px;
-    }
-    .SearchFilter{
-        justify-content: center;
-    }
-}
-@media (max-width:1400px) {
-    .filters{
-        flex-wrap: wrap;
-        gap: 50px;
-        justify-content: center;
-    }
-    .PricePadd{
-        border: none;
-    }
-}
-@media (max-width:854px) {
-    .TypePadd{
-        border: none;
-    }
-}
-@media (max-width:488px) {
-    .date_filter{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-    .Dates{
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
-    }
-}
-@media (max-width:465px) {
-    .Price{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-    }
-    .price_filter{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 }
 </style>

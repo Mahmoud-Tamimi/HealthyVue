@@ -116,6 +116,15 @@ export default defineComponent({
     align-items: center;
     letter-spacing: 0.3em;
 }
+@media (max-width:767px) {
+  .StartBtn{
+    font-size: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+   }
+}
 .health{
     margin-left: 100px;
 }

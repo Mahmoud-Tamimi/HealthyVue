@@ -8,9 +8,9 @@
         <span>Healthy</span>
       </div>
     </div>
-    <div class="Info" id="Menu">
+    <div class="Info" id="Menu"  :class="{InfoResponsive: Menu}">
       <span class="Links">
-        <router-link to="/Home">Home</router-link>
+        <router-link to="/">Home</router-link>
         <router-link to="/Services">Services</router-link>
         <router-link to="/About">About Us</router-link>
       </span>
@@ -27,7 +27,7 @@
           <img class="IconSaerch" src="@/assets/Images/search-square-svgrepo-com.svg" alt=""> <!-- onclick="menuSearch()"-->
          </div>
          <div>
-           <img class="IconMenu" src="@/assets/Images/BurgerMenu.svg" alt="">  <!-- onclick="menubox()"-->
+           <img class="IconMenu" src="@/assets/Images/BurgerMenu.svg" alt="" @click="Menu=!Menu">  <!-- onclick="menubox()"-->
          </div>
       </div>
     </div>
@@ -42,7 +42,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   data () {
     return {
-      count: 0
+      count: 0,
+      Menu: false
     }
   }
 })
@@ -68,6 +69,9 @@ export default defineComponent({
     height: 100%;
     align-items: center;
 }
+.InfoResponsive{
+        right: 0!important;
+    }
 .Nav{
     display: flex;
     align-items: center;
