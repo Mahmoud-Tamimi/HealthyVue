@@ -2,24 +2,29 @@
   <div class="hello">
     <h1>this is a test component</h1>
     <h3>prop1: {{ prop1 }}</h3>
-    <button @click="Clicked()"></button>
+    <button @click="Clickmatutions()"></button>
     <button @click="sendData">Send Emits</button>
+    <span>{{ LastName }}</span>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script>
 
-export default defineComponent({
+import Mainmixin from '@/components/mixin.vue'
+export default ({
+  mixins: [Mainmixin],
   props: {
     prop1: String
   },
   data () {
-    return {}
+    return {
+      LastName: this.$store.state.search
+    }
   },
   methods: {
-    Clicked () {
-      alert('test component')
+    Clickmatutions () {
+      this.function1()
+      return this.$store.commit('Clicked')
     },
     sendData () {
       this.$emit('sending-start')

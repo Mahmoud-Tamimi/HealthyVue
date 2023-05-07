@@ -1,5 +1,6 @@
 <template>
   <Header></Header>
+  <Simple></Simple>
   <router-view/>
   <Footer></Footer>
 </template>
@@ -8,13 +9,14 @@
 import { defineComponent } from 'vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Simple from './components/Simple.vue'
 
 export default defineComponent({
   name: 'HomeView',
   data () {
     return {}
   },
-  components: { Header, Footer }
+  components: { Header, Footer, Simple }
 })
 </script>
 
